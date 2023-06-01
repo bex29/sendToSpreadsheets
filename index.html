@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Save Web Form Data to Spreadsheets - Contact Form</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="full_name">Name of the problem</label>
+      <br />
+      <input name="full_name" id="full_name" />
+      <br />
+      <label>Link to the problem</label>
+      <br />
+      <input name="problemURL" />
+      <br />
+      <label
+        for="problemType
+      "
+        >Type of the problem</label
+      >
+      <br />
+      <select name="problemType" id="problemType">
+        <option value="wff">Well formed formulae</option>
+        <option value="chapterTwo">Chapter Two</option>
+      </select>
+      <br />
+      <label>Date</label>
+      <br />
+      <input type="date" id="date" name="date" /><br />
+
+      <label for="score"
+        >how well do you think you did (between 0 and 10):</label
+      >
+      <br />
+      <input
+        type="range"
+        id="score"
+        name="score"
+        min="0"
+        max="10"
+        value="5"
+        oninput="this.nextElementSibling.value = this.value"
+      />
+      <output>5</output>
+      <br />
+      <br />
+      <label>Feedback</label>
+      <br />
+      <textarea name="feedback"> </textarea>
+      <br />
+    </form>
+    <button onclick="SubForm()">Submit</button>
+  </body>
+  <script src="./script.js"></script>
+</html>
